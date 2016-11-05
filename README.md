@@ -1,11 +1,27 @@
 # ADA_Project
-Project: Mobility patterns/events in Switzerland with Twitter
 
-Description: Using geolocated tweets in the Swiss area, we could work on:
-- reconstructing mobility flows of the users
+**Abstract**
 
--- get insights into high-frequency migration patterns (e.g., the “frontaliers” who commute from France to Geneva everyday; Germans who commute to Zurich; etc.)
+From geolocalized Twitter data, we would like to perform event detection and identify popular touristic destinations. From these findings, we would like to determine whether or not there are sufficient conditions to reach these events / touristic destinations.
 
--- detect changes in migration patterns when, e.g., a new Alpine tunnel gets opened (GBT) https://en.wikipedia.org/wiki/Gotthard_Base_Tunnel (e.g., according to this NZZ article, the Gotthard in particular is expected to be a game changer for the relations between the German and Italian parts of CH)
+Data Description
 
-- detecting events (date, location, positive or negative sentiment)
+Geolocated Twitter data
+Swiss public transport API
+SBB Data
+
+**Feasibility and Risks**
+
+There is risk that we are not able to gather enough information from the Twitter information. One challenge will be figuring out how to determine there is an event. The simplest manner would be detect a high frequency of tweets at a certain time and at a certain place. We might need to cross-reference a detected date and location to an event by scraping data additional data from the internet. Another way to detect an event would be to see if the same pattern occurs roughly a year later and in the same place. 
+
+Working between three different APIs and datasets poses the problem of how data is entered as different tools might have different names and standards for things such as the names of places.
+
+**Deliverables**
+
+As a deliverable we will have a table listing detected events and popular touristic locations along with the estimated attendance from tweets and some indications of the number of connections to that event or location. Sometimes there are increased connections due to the occurrence of an event.
+
+We will also try to create some interactive visualisation with Bokeh and perhaps with a map.
+
+**Timeplan**
+
+When we get hold of the Twitter data, we will first need to see what we have available. We might want to sort the tweets by location and within location by date (perhaps aggregate into weeks). This basic processing will give us a general overview of much data we have per region and how it is spread across time.
