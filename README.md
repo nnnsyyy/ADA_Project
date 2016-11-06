@@ -1,12 +1,12 @@
 # ADA Project Proposal - On the move for a good time!
 
-**Team**
+## Team
 
-* Eric Bezzam
-* Shiyue Nie
-* Weiyu Zhang
+* Eric Bezzam ([@ebezzam](https://github.com/ebezzam/))
+* Shiyue Nie ([@nnnsyyy](https://github.com/nnnsyyy))
+* Weiyu Zhang ([@BeforeRain](https://github.com/BeforeRain/))
 
-**Abstract**
+## Abstract
 
 In this project, we would like to detect movement patterns within Switzerland, in particular event detection and identify popular destinations. To accomplish this task we will make use of geolocated tweets in the Swiss area. In a previous work, it has been shown that social media data can be exploited to extract urban movement patterns [1]. We would like to apply similar techniques to Switzerland as a whole. Some patterns that we are considering to analyze include:
 
@@ -16,10 +16,34 @@ In this project, we would like to detect movement patterns within Switzerland, i
 
 The final goal of the project is to map out social movement patterns within Switzerland while showing the (hopefully) meaningful insight social media data can provide in such an analysis.
 
-**Data Description**
+## Data Description
+In this project, we will use geolocated tweets as our main dataset, identifying mobility patterns and detecting events from them. To further explore these patterns and events, we may use swiss public transport data to conduct spatial and temporal analysis. 
+
+- **Geolocated Tweets**   
+
+ADA staff will provide us with a dataset of geolocated tweets in the Swiss area in the past 4 years, starting from 2012. The dataset is collected using Twitter API. For every [tweet object](https://dev.twitter.com/overview/api/tweets), we can obtain its user, text, geo-location, time, etc. The following table describes these fields: 
 
 
-**Feasibility and Risks**
+| Field | Type | Description |
+| ----- | ----- | ----------- |
+| user | Users | The user who posted this Tweet |
+| text | String | The actual UTF-8 text of the status update |
+| coordinates | Collection of Float | The longitude and latitude of the Tweet’s location, as an collection in the form of [longitude, latitude] |
+| created_at | String | UTC time when this Tweet was created |
+
+We will have a better understanding of the dataset after we get access to it. In case the provided dataset is insufficient, we will scrape more data using [Twitter REST API](https://dev.twitter.com/rest/public).
+
+
+- [Swiss Public Transport API](https://transport.opendata.ch/docs.html)  
+
+The Transport API allows scraping public transport data within Switzerland. With that API, we can obtain available connections for given departure and arrival stations. Thus, we can analyze the relationship between mobility patterns and the number of connections over time.
+
+- [SBB OpenData](http://www.sbb.ch/en/group/the-company/facts-and-figures/open-data.html)  
+
+SBB(Swiss federal railways) provides open data and APIs for stations and traffic, which would be useful for further analysis of mobility patterns and detected events.
+
+
+## Feasibility and Risks
 
 During this project, we would have liked to identify general movement trends (such as the flow of frontaliers) but as the Swisscom data is not available we will tend towards identifying social activity from the provided Twitter data. This seems feasible as most users are probably not using Twitter to share/log their hourly or even daily motions but perhaps are more likely to post something when they are doing something "fun" or "unique" such as going out with friends, attending an event, or visiting an exciting place (we will try to find some concrete analysis/previous work to justify this for the final report!). Moreover, such tweets can be associated with a location (using the Twitter Search API [2]) and has been collected into a dataset that will be provided by the ADA course.
 
@@ -32,7 +56,7 @@ Although social media data is sparse (with regards to useable information), we a
 The feasibility and risks of this project will be better understood when the data has been provided. Perhaps there are not enough people represented in the data that use Twitter enough and that are using it in a meaningful manner for our analysis. It may be the case that we would need to collect more data from Twitter, SBB, Instagram, Facebook, and/or Flickr.
 
 
-**Deliverables**
+## Deliverables
 
 Leading up to our analysis, we will have also performed some data cleaning and wranling with Pandas in order to organize the provided dataset so that it can be conveniently used for our analysis.
 
@@ -48,7 +72,7 @@ If there is sufficient data for general trends during evenings/weekends, we woul
 
 An in-depth description of the data cleaning and statistical modeling will be provided in a report.
 
-**Timeplan**
+## Timeplan
 
 1. Preparation(2 weeks): 
 
@@ -76,10 +100,12 @@ An in-depth description of the data cleaning and statistical modeling will be pr
 
   - Log sorting: Review all records from the beginning. Draw the whole process and list some important progress(e.g. problem found and solved, function implementation).
   - Improvement: If time permitted, improve the readability of results(e.g. suggestions and viz).
-  - Report writing and symposium preparation.
+  - Report writing and symposium 
 
-**References**
+
+## References
 <br>
 [1] "Extracting Urban Patterns from Location-based Social Networks" - http://www.agentgroup.unimore.it/Zambonelli/PDF/LBSN11.pdf
 <br>
 [2] Twitter Search API - https://dev.twitter.com/rest/public/search
+
