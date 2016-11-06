@@ -47,6 +47,7 @@ An in-depth description of the data cleaning and statistical modeling will be pr
 
 
 **References**
-[1] http://www.agentgroup.unimore.it/Zambonelli/PDF/LBSN11.pdf "Extracting Urban Patterns from Location-based Social Networks"
 <br>
-[2] https://dev.twitter.com/rest/public/search "Twitter Search API"
+[1] "Extracting Urban Patterns from Location-based Social Networks" - http://www.agentgroup.unimore.it/Zambonelli/PDF/LBSN11.pdf
+<br>
+[2] Twitter Search API - https://dev.twitter.com/rest/public/search
