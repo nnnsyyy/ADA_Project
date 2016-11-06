@@ -50,7 +50,24 @@ An in-depth description of the data cleaning and statistical modeling will be pr
 
 **Timeplan**
 
-
+1. Preparation(2 weeks): 
+- Data cleaning: Check all attributes of Twitter data we have to see which features we need(e.g. location, time, topic/key words etc.). Ensure the formats of useful features and then generate precise testing data. Sorting data in time(especially weekends and holidays). 
+- Research: Study existing papers or programs relevant to located data analysis or social media data analysis. Choose the appropriate methodology with some useful models and algorithms which may be suitable to our project.
+2. Testing(2 weeks):
+- Model selection: Design tentative models and make some analysis. Figure out theirs pros and cons.
+- Further research: Comparing to different references and our tentative models, optimize the algorithms.
+- Data refresh: If needed, we will do some data scraping for supplement.
+3. Preliminary analysis(1-2 weeks):
+- Specific results: Accomplish part of setting goals, like finding some movement trends or activities/events.
+- Visualization(viz) study: Apply some viz methods to the results.
+4. Integrating(2-3 weeks):
+- Model modifying: Modularize the codes(e.g. packing functions) which achieve general result.
+- Viz realisation: Display the event analysis on map.
+- Verification and validation: Make sure the method can be used in the other time periods after modifying.
+5. Conclusion(1-2 weeks):
+- Log sorting: Review all records from the beginning. Draw the whole process and list some important progress(e.g. problem found and solved, function implementation).
+- Improvement: If time permitted, improve the readability of results(e.g. suggestions and viz).
+- Report writing and symposium preparation.
 
 **References**
 <br>
