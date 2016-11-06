@@ -2,7 +2,7 @@
 
 **Abstract**
 
-In this project, we would like to detect movement patterns within Switzerland, in particular event detection and identify popular destinations. To accomplish this task we will make use of geolocated tweets in the Swiss area. In a previous work, it has been shown that social media data can be exploited to extract urban movement patterns [1]. We would like to apply similar techniques to Switzerland as a whole. Some patterns that we are considering to analyze include:
+In this project, we would like to detect movement patterns within Switzerland, in particular event detection and identify popular destinations. To accomplish this task we will make use of geolocated tweets in the Swiss area. In a previous work, it has been shown that social media data can be exploited to extract urban movement patterns [Extracting Urban Patterns from Location-based Social Networks][1]. We would like to apply similar techniques to Switzerland as a whole. Some patterns that we are considering to analyze include:
 
 1. _Highly concentrated activity due to an event (concert, show, festival, sporting event)_
 2. _Concentrated activity at locations over time (or during the weekend / a particular season) due to a popular/touristic site_
@@ -15,7 +15,7 @@ The final goal of the project is to map out social movement patterns within Swit
 
 **Feasibility and Risks**
 
-During this project, we would have liked to identify general movement trends (such as the flow of frontaliers) but as the Swisscom data is not available we will tend towards identifying social activity from the provided Twitter data. This seems feasible as most users are probably not using Twitter to share/log their hourly or even daily motions but perhaps are more likely to post something when they are doing something "fun" or "unique" such as going out with friends, attending an event, or visiting an exciting place (we will try to find some concrete analysis/previous work to justify this for the final report!). Moreover, such tweets can be associated with a location (using the Twitter Search API [2]) and has been collected into a dataset that will be provided by the ADA course.
+During this project, we would have liked to identify general movement trends (such as the flow of frontaliers) but as the Swisscom data is not available we will tend towards identifying social activity from the provided Twitter data. This seems feasible as most users are probably not using Twitter to share/log their hourly or even daily motions but perhaps are more likely to post something when they are doing something "fun" or "unique" such as going out with friends, attending an event, or visiting an exciting place (we will try to find some concrete analysis/previous work to justify this for the final report!). Moreover, such tweets can be associated with a location (using the Twitter Search API [Twitter Search API][2]) and has been collected into a dataset that will be provided by the ADA course.
 
 Although social media data is sparse (with regards to useable information), we are assuming that during the social activities/movements mentioned in the abstract, people are more likely to make a post. Below we have done a brief feasibility/risk analysis for each of the ideas. After working with data, we will be able to identify which tasks are more feasible for the final project.
 
@@ -38,7 +38,7 @@ Our final deliverable be in the form of an IPython notebook with appealing visua
 
 Some tools we will consider for visualization include: Folium, Bokeh, geoplotlib, Plotly, and Seaborn.
 
-If there is sufficient data for general trends during evenings/weekends, we would like to do some statistical modeling as was done in [1] for NYC. In this case, we would use scikit-learn and/or Tensorflow. 
+If there is sufficient data for general trends during evenings/weekends, we would like to do some statistical modeling as was done in  [Extracting Urban Patterns from Location-based Social Networks][1] for NYC. In this case, we would use scikit-learn and/or Tensorflow. 
 
 An in-depth description of the data cleaning and statistical modeling will be provided in a report.
 
@@ -47,5 +47,5 @@ An in-depth description of the data cleaning and statistical modeling will be pr
 
 
 **References**
-[1]: http://www.agentgroup.unimore.it/Zambonelli/PDF/LBSN11.pdf
-[2]: https://dev.twitter.com/rest/public/search
+[1]: http://www.agentgroup.unimore.it/Zambonelli/PDF/LBSN11.pdf "Extracting Urban Patterns from Location-based Social Networks"
+[2]: https://dev.twitter.com/rest/public/search "Twitter Search API"
