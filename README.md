@@ -47,5 +47,5 @@ An in-depth description of the data cleaning and statistical modeling will be pr
 
 
 **References**
-[1] http://www.agentgroup.unimore.it/Zambonelli/PDF/LBSN11.pdf
-[2] https://dev.twitter.com/rest/public/search
+[1]: http://www.agentgroup.unimore.it/Zambonelli/PDF/LBSN11.pdf
+[2]: https://dev.twitter.com/rest/public/search
