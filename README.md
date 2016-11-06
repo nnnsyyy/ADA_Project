@@ -88,18 +88,18 @@ An in-depth description of the data cleaning and statistical modeling will be pr
 3. Preliminary analysis(1-2 weeks):
 
   - Specific results: Accomplish part of setting goals, like finding some movement trends or activities/events.
-  - Visualization(viz) study: Apply some viz methods to the results.
+  - Visualization study: Apply some viz methods to the results.
   
 4. Integrating(2-3 weeks):
 
   - Model modifying: Modularize the codes(e.g. packing functions) which achieve general result.
-  - Viz realisation: Display the event analysis on map.
+  - Visualization realisation: Display the event analysis on map.
   - Verification and validation: Make sure the method can be used in the other time periods after modifying.
   
 5. Conclusion(1-2 weeks):
 
   - Log sorting: Review all records from the beginning. Draw the whole process and list some important progress(e.g. problem found and solved, function implementation).
-  - Improvement: If time permitted, improve the readability of results(e.g. suggestions and viz).
+  - Improvement: If time permitted, improve the readability of results(e.g. suggestions and visualization).
   - Report writing and symposium 
 
 
