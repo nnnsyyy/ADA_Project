@@ -94,7 +94,7 @@ An in-depth description of the data cleaning and statistical modeling will be pr
 
   - Model modifying: Modularize the codes(e.g. packing functions) which achieve general result.
   - Visualization realisation: Display the event analysis on map.
-  - Verification and validation: Make sure the method can be used in the other time periods after modifying.
+  - Verification and validation: Make sure methods can be used in all cases after modifying.
   
 5. Conclusion(1-2 weeks):
 
