@@ -1,2 +1,5 @@
 *DS_Store
 *.tsv
+*.zip
+data/twitter_swisscom_proc/*
+*data/twitter-swisscom/x*
