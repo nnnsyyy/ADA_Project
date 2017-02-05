@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Leaflet.timeline</title>
+    <title>Tweet Distribution in Switzerland</title>
     <script src="javascripts/leaflet.js"></script>
     <script src="javascripts/moment.min.js"></script>
     <script src="javascripts/leaflet.timeline.js"></script>
@@ -26,7 +26,7 @@
       #map{
         position: fixed;
         top: 0;
-        left: 20vw;
+        left: 22vw;
         bottom: 0;
         right: 0;
       }
@@ -43,8 +43,8 @@
   </head>
   <body>
     <div id="info">
-      <h1>Tweets in Switzerland</h1>
-      <h2>Event details</h2>
+      <h1>Daily Tweets in Switzerland</h1>
+      <h2></h2>
       <h3></h3>
       <ul id="displayed-list"></ul>
     </div>
@@ -70,9 +70,9 @@
         var displayed = timeline.getDisplayed();
         var list = document.getElementById('displayed-list');
         list.innerHTML = "";
-        displayed.forEach(function(quake){
+        displayed.forEach(function(item){
           var li = document.createElement('li');
-          li.innerHTML = quake.properties.title;
+          li.innerHTML = item.properties.text;
           list.appendChild(li);
         });
       }
