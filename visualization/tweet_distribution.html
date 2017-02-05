@@ -1,0 +1,108 @@
+<html>
+  <head>
+    <title>Tweet Distribution in Switzerland</title>
+    <script src="javascripts/leaflet.js"></script>
+    <script src="javascripts/moment.min.js"></script>
+    <script src="javascripts/leaflet.timeline.js"></script>
+
+    <link href="stylesheets/leaflet.css" rel="stylesheet">
+    <link href="stylesheets/leaflet.timeline.css" rel="stylesheet">
+
+    <style>
+      @import url(http://fonts.googleapis.com/css?family=Open+Sans); 
+      html, body{
+        margin: 0;
+        padding: 0;
+        font-family: "Open Sans", sans-serif;
+      }
+      #info{
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 20vw;
+        padding: 1em;
+      }
+      #map{
+        position: fixed;
+        top: 0;
+        left: 22vw;
+        bottom: 0;
+        right: 0;
+      }
+      .leaflet-bottom.leaflet-left{
+        width: 100%;
+      }
+      .leaflet-control-container .leaflet-timeline-controls{
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="info">
+      <h1>Daily Tweets in Switzerland</h1>
+      <h2></h2>
+      <h3></h3>
+      <ul id="displayed-list"></ul>
+    </div>
+    <div id="map"></div>
+
+    <script>
+      var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+      var osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">' +
+        'OpenStreetMap</a> contributors';
+      var osm = L.tileLayer(osmUrl, {
+        maxZoom: 18,
+        attribution: osmAttrib,
+        noWrap: true
+      });
+      var map = L.map('map', {
+        layers: [osm],
+        center: new L.LatLng(46.5, 8), // longtitude, latitude
+        zoom: 7,//8,
+        maxBounds: [[90,-180], [-90, 180]]
+      });
+
+      function updateList(timeline){
+        var displayed = timeline.getDisplayed();
+        var list = document.getElementById('displayed-list');
+        list.innerHTML = "";
+        displayed.forEach(function(item){
+          var li = document.createElement('li');
+          li.innerHTML = item.properties.text;
+          list.appendChild(li);
+        });
+      }
+
+      function onLoadData(data){
+        var timeline = L.timeline(data, {
+          style:{
+              opacity: 0.9,
+              stroke: false,
+          },
+ 
+          formatDate: function(date){
+            return moment(date).format("YYYY-MM-DD");
+          },
+          pointToLayer: function(data, latlng){
+            var hue = 50;//data.properties.mag / 10 * (hue_max - hue_min) + hue_min;
+            return L.circleMarker(latlng, {
+              radius: 7,//data.properties.mag * 3,
+              color: "hsl("+hue+", 100%, 50%)",
+              fillColor: "hsl("+hue+", 100%, 50%)",
+            });
+          }
+        });
+        timeline.addTo(map);
+        timeline.on('change', function(e){
+          updateList(e.target);
+        });
+        updateList(timeline);
+      }
+    </script>
+    <script src="./tweets.json"></script>
+  </body>
+</html>
